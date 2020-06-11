@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Web電卓</title>
+</head>
+<body>
+<h2>計算結果</h2>
+<p th:text="'答えは、' + ${fdat.getAns()}" />
+<a href="/input">入力へ戻る</a>
+</body>
+</html>

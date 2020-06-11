@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Web電卓</title>
+</head>
+<body>
+    <p>計算したい値を入力し、演算子を選択してください。</p>
+    <form th:action="@{/result}"
+          th:object="${fdat}" method="post">
+        <input type="number" th:field="*{num1}" />
+        <select th:field="*{ope}">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="×">×</option>
+            <option value="÷">÷</option>
+        </select>
+        <input type="number" th:field="*{num2}" />
+        <input type="submit" value="計算" />
+    </form>
+</body>
+</html>
